@@ -29,7 +29,9 @@ module.exports = {
 
 
     excluirUsuario: async (_, { filtro }) => {
-       
+        const data = await Usuario.findOne(filtro)
+        await Usuario.findOneAndDelete(filtro)
+        return data
     },
 
     alterarUsuario: (_, { filtro, dados }) => {
