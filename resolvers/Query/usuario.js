@@ -6,7 +6,7 @@ module.exports = {
      usuarios:() =>  Usuario.find()
      
      ,
-     usuario:(_, { filtro }) => {}
+     usuario:(_, { filtro }) =>  Usuario.findOne(filtro)
        
     ,
 }
