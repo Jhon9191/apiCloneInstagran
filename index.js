@@ -1,31 +1,12 @@
-const { ApolloServer, gql } = require('apollo-server')
-
-const typeDefs = gql`
-
-type Query{
-    ola: String
-}
+const { ApolloServer, gql } = require('apollo-server');
+const { importSchema } = require('graphql-import');
+const mongoose = require('mongoose')
+const resolvers = require('./resolvers')
+const schemaPath = './schema/index.graphql'
 
 
-`
-
-const resolvers = {
-
-    Query: {
-
-        ola(){
-            return "Hello graphql"
-        }
-
-    }
-
-}
-
-const server = new ApolloServer({
-    typeDefs,
-    resolvers
-});
+const server = new ApolloServer({typeDefs: importSchema(schemaPath),resolvers})
 
 server.listen().then(({ url }) => {
-    console.log(`Executando na porta ${url}`)
+    console.log(`Executando em ${url}`)
 })

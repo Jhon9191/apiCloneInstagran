@@ -1,0 +1,39 @@
+##GRAPHQL VÊ ISSO E VOCE PODE CONSULTAR ESSES DADOS CASO ELES ESTEJAM NO BANOC, C
+##COMO A SENHA NAO E PRA SER RETORNADA ASSIM O IDEAL É DEIXA ELA QUEITINHA NO BANCO 
+## AUHAUAHAU
+type Usuario {
+    _id: ID
+    nome: String!
+    email: String!
+    senha: String!
+    perfis: [Perfil]
+}
+
+input UsuarioInput {
+    nome: String
+    email: String
+    senha: String
+    perfis: [PerfilFiltro]
+}
+
+input UsuarioFiltro {
+    _id: ID
+    email: String
+}
+
+type Perfil {
+    _id: ID
+    nome: String!
+    rotulo: String!
+    usuarios: [Usuario]
+}
+
+input PerfilInput {
+    nome: String
+    rotulo: String
+}
+
+input PerfilFiltro {
+    _id: ID
+    nome: String
+}
