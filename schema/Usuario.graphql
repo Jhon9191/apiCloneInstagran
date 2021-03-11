@@ -6,14 +6,12 @@ type Usuario {
     nome: String!
     email: String!
     senha: String!
-    perfis: [Perfil]
 }
 
 input UsuarioInput {
     nome: String
     email: String
     senha: String
-    perfis: [PerfilFiltro]
 }
 
 input UsuarioFiltro {
@@ -21,19 +19,3 @@ input UsuarioFiltro {
     email: String
 }
 
-type Perfil {
-    _id: ID
-    nome: String!
-    rotulo: String!
-    usuarios: [Usuario]
-}
-
-input PerfilInput {
-    nome: String
-    rotulo: String
-}
-
-input PerfilFiltro {
-    _id: ID
-    nome: String
-}

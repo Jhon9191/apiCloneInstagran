@@ -3,10 +3,10 @@ require('../../models/Usuario')
 const Usuario = mongoose.model('Usuario')
 
 module.exports = {
-     usuarios:() => Usuario.find() 
+     usuarios:() =>  Usuario.find()
      
      ,
-     usuario:(_, { filtro }) => Usuario.findOne(filtro)
+     usuario:(_, { filtro }) => {}
        
     ,
 }

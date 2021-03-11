@@ -4,6 +4,12 @@ const mongoose = require('mongoose')
 const resolvers = require('./resolvers')
 const schemaPath = './schema/index.graphql'
 
+mongoose.connect("mongodb+srv://joao:joao@cluster0.jlbcl.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(()=>{
+    console.log("Conectando ao mongo")
+})
 
 const server = new ApolloServer({typeDefs: importSchema(schemaPath),resolvers})
 
