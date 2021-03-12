@@ -2,7 +2,7 @@ type Post {
     _id: ID
     titulo: String!
     descricao: String!
-    autor: Usuario!
+    autor: ID!
 }
 
 input PostInput {

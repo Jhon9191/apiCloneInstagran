@@ -10,8 +10,7 @@ const Post = mongoose.Schema({
         required: true
     },
     autor:{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Usuario"
+        type: String
     }
 },{
     timestamps : true
