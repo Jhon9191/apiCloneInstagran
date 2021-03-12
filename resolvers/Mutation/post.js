@@ -19,7 +19,7 @@ module.exports = {
         return data
     },
 
-    alterarPost: (_, { filtro, dados }) => {}
+    alterarPost: (_, { filtro, dados }) => Post.findOneAndUpdate(filtro, dados, { new: true })
     
 
 }
