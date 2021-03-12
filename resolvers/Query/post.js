@@ -6,5 +6,10 @@ module.exports = {
      posts:() =>  Post.find()
      
      ,
-     
+     post: async(_, { filtro }) =>  {
+         const post = await Post.findOne(filtro)
+         return post
+     }
+       
+    ,
 }

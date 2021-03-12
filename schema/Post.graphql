@@ -12,5 +12,5 @@ input PostInput {
 }
 
 input PostFiltro {
-    _id: ID
+    autor: ID
 }
