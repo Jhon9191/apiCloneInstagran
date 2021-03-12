@@ -13,7 +13,11 @@ module.exports = {
         
     ,
 
-    excluirPost: async (_, { filtro }) => {},
+    excluirPost: async (_, { filtro }) => {
+        const data = await Post.findOne(filtro)
+        await Post.findOneAndDelete(filtro)
+        return data
+    },
 
     alterarPost: (_, { filtro, dados }) => {}
     
