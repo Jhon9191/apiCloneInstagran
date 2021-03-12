@@ -8,7 +8,7 @@ type Post {
 input PostInput {
     titulo: String
     descricao: String
-    autor: Usuario
+    autor: ID
 }
 
 input PostFiltro {
