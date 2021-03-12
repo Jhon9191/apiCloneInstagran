@@ -14,4 +14,20 @@ type Mutation {
         dados: UsuarioInput!
     ): Usuario
 
+
+    novoPost(
+        dados: PostInput!
+    ): Post!
+
+    excluirPost(
+        filtro: PostFiltro!
+    ): Post
+
+    alterarPost(
+        filtro: PostFiltro!
+        dados: PostInput!
+    ): Post
+
+
+
 }
