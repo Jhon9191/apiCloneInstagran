@@ -1,0 +1,16 @@
+type Post {
+    _id: ID
+    titulo: String!
+    descricao: String!
+    autor: Usuario!
+}
+
+input PostInput {
+    titulo: String
+    descricao: String
+    autor: Usuario
+}
+
+input PostFiltro {
+    _id: ID
+}
